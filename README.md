@@ -3,17 +3,17 @@
 ## Projeto final de Programação III - UESPI 
   **Especificações:**
       [ ] Uso de plugin Kaminari 
-      [ ] Uso de plugin Devise 
-      [ ] Uso de plugin Twitter Bootstap 
+      [X] Uso de plugin Devise 
+      [ ] Uso de plugin Twitter Bootstrap 
       [ ] Gerar um arquivo PDF da listagem de tela de consulta 
       [ ] Validações e Associações entre os modelos 
     
-  **Funções para implementar:**
-      [ ] Inserção de novos carros 
-      [ ] Registro de Locatários 
-      [ ] Exclusão de registros 
-      [ ] Alteração de registros 
-      [ ] Consulta de registros
+   **Funções para implementar:**
+      [X] Inserção de novos carros 
+      [X] Registro de Locatários 
+      [X] Exclusão de registros 
+      [X] Alteração de registros 
+      [X] Consulta de registros
 
 ## Linguagens e libs utilizadas :books:
 
