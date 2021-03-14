@@ -14,7 +14,7 @@ Usamos as tecnologias:
     <li>Rails: 6.1.1</li>
 </ul>
 
-===================
+<%# =================== %>
         <!-- Telefone-->
         <div class="form-group">
         <label class="col-md-2 control-label" for="prependedtext">Telefone</label>
@@ -25,4 +25,13 @@ Usamos as tecnologias:
             OnKeyPress="formatar('## #####-####', this)">
             </div>
         </div>
-        
+<%# ============================ %>
+        <label class="col-md-2 control-label" for="CEP">CEP</label>
+            <div class="col-md-8">
+                <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-success" onclick="pesquisacep(cep.value)">Pesquisar</button>
+            </div>
+        </div>
+                
