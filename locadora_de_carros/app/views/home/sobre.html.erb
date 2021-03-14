@@ -1,15 +1,89 @@
-<h1>Sobre nós...</h1>
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Cadastro Locadora </title>
+        
+    </head>
 
-<p>
-Esse é um projeto realizado por <strong>Quêmia e Maria Clara</strong>. 
-</p>
+    <body>
 
-<p>
-Alunas dos quarto perio de Ciência da Computação na UESPI, para a disciplina de Programacao III.
-Usamos as tecnologias:
-</p>
+    <form class="form-row">
+    <fieldset>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="text sm-6 text-muted">Cadastro Cliente</h3>
+            </div>
+            
+        <div class="panel-body">
 
-<ul>
-    <li>Ruby: 2.7.2</li>
-    <li>Rails: 6.1.1</li>
-</ul>
+        <div class="form-group">
+        <label class="col-md-2 control-label" for="Nome">Nome</label>  
+        <div class="col-sm-6">
+        <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
+        </div>
+        </div>
+
+         <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label class="col-md-6 control-label" for="Nome">CPF</label>  
+                    <div class="col-md-6">
+                    <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+        </div>
+    
+
+        <label class="col-sm-1 control-label" for="radios">Sexo</label>
+        <div class="col-md-2"> 
+            <label required="" class="radio-inline" for="radios-1" >
+            <input name="sexo" id="sexo" value="feminino" type="radio" required>
+            Feminino
+            </label> 
+            <label class="radio-inline" for="radios-1">
+            <input name="sexo" id="sexo" value="masculino" type="radio">
+            Masculino
+            </label>
+        </div>
+        </div>
+
+       <!-- Email-->
+        <div class="form-group">
+        <label class="col-md-2 control-label" for="prependedtext">Email </label>
+        <div class="col-md-5">
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input id="prependedtext" name="prependedtext" class="form-control" placeholder="email@email.com" required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-6">
+            <div class="form-group">
+            <label class="col-md-2 control-label" for="prependedtext">Telefone</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" required="" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+                OnKeyPress="formatar('## #####-####', this)">
+                </div>
+            </div>
+            
+            <div class="col-sm-6"></div>
+        </div>
+        <label class="col-md-2 control-label" for="CEP">CEP</label>
+            <div class="col-md-8">
+                <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-success" onclick="pesquisacep(cep.value)">Pesquisar</button>
+            </div>
+        </div>
+                
+    </body>
+
+</html>
