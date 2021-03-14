@@ -4,7 +4,7 @@
   **Especificações:**
       [ ] Uso de plugin Kaminari 
       [X] Uso de plugin Devise 
-      [ ] Uso de plugin Twitter Bootstrap 
+      [X] Uso de plugin Twitter Bootstrap 
       [ ] Gerar um arquivo PDF da listagem de tela de consulta 
       [ ] Validações e Associações entre os modelos 
     
