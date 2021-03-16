@@ -1,0 +1,2 @@
+class LocatarioCarro < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data check in:</strong>
+  <%= @emprestimo.data_check_in %>
+</p>
+
+<p>
+  <strong>Data check out:</strong>
+  <%= @emprestimo.data_check_out %>
+</p>
+
+<p>
+  <strong>Limite km:</strong>
+  <%= @emprestimo.limite_km %>
+</p>
+
+<p>
+  <strong>Wepay access token:</strong>
+  <%= @emprestimo.wepay_access_token %>
+</p>
+
+<p>
+  <strong>Wepay account:</strong>
+  <%= @emprestimo.wepay_account_id %>
+</p>
+
+<%= link_to 'Edit', edit_emprestimo_path(@emprestimo) %> |
+<%= link_to 'Back', emprestimos_path %>

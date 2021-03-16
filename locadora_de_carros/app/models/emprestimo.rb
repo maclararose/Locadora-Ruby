@@ -1,0 +1,3 @@
+class Emprestimo < ApplicationRecord
+    
+end

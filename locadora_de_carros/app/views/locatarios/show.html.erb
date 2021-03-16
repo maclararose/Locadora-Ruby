@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @locatario.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @locatario.email %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @locatario.senha %>
+</p>
+
+<p>
+  <strong>Data de nascimento:</strong>
+  <%= @locatario.data_nascimento %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @locatario.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_locatario_path(@locatario) %> |
+<%= link_to 'Back', locatario_path %>

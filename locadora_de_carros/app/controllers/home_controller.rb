@@ -1,8 +1,3 @@
 class HomeController < ApplicationController
-  def index
-  end
-
-  def sobre
-  end
-  
+    before_action :authenticate_locatario!
 end
