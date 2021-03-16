@@ -12,18 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :ano %>
-    <%= form.datetime_select :ano %>
-  </div>
-
-  <div class="field">
     <%= form.label :marca %>
     <%= form.text_field :marca %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cor %>
-    <%= form.text_field :cor %>
   </div>
 
   <div class="field">
@@ -32,13 +22,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :km %>
-    <%= form.text_field :km %>
+    <%= form.label :cor %>
+    <%= form.text_field :cor %>
   </div>
 
   <div class="field">
-    <%= form.label :revisao %>
-    <%= form.check_box :revisao %>
+    <%= form.label :revisoes_em_dia %>
+    <%= form.check_box :revisoes_em_dia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diaria %>
+    <%= form.text_field :diaria %>
   </div>
 
   <div class="actions">

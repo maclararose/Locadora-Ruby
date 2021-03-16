@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Locadora</title>
+    <title>LocadoraTeste</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,10 +11,6 @@
   </head>
 
   <body>
-    <% if locatario_signed_in?%>
-      Usuário logado: <%= current_locatario.email =%>
-      <%= link_to "Sign Out", destroy_locatario_session_path, method: :delete %>
-    <% end %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

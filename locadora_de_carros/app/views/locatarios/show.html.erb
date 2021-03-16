@@ -6,17 +6,7 @@
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @locatario.email %>
-</p>
-
-<p>
-  <strong>Senha:</strong>
-  <%= @locatario.senha %>
-</p>
-
-<p>
-  <strong>Data de nascimento:</strong>
+  <strong>Data nascimento:</strong>
   <%= @locatario.data_nascimento %>
 </p>
 
@@ -25,5 +15,10 @@
   <%= @locatario.sexo %>
 </p>
 
+<p>
+  <strong>Endereco:</strong>
+  <%= @locatario.endereco %>
+</p>
+
 <%= link_to 'Edit', edit_locatario_path(@locatario) %> |
-<%= link_to 'Back', locatario_path %>
+<%= link_to 'Back', locatarios_path %>

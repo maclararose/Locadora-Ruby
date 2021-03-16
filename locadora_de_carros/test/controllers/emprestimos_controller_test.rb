@@ -17,7 +17,7 @@ class EmprestimosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create emprestimo" do
     assert_difference('Emprestimo.count') do
-      post emprestimos_url, params: { emprestimo: { data_check_in: @emprestimo.data_check_in, data_check_out: @emprestimo.data_check_out, limite_km: @emprestimo.limite_km, wepay_access_token: @emprestimo.wepay_access_token, wepay_account_id: @emprestimo.wepay_account_id } }
+      post emprestimos_url, params: { emprestimo: { data_checkin: @emprestimo.data_checkin, data_checkout: @emprestimo.data_checkout, limite_km: @emprestimo.limite_km, meio_pagamento: @emprestimo.meio_pagamento } }
     end
 
     assert_redirected_to emprestimo_url(Emprestimo.last)
@@ -34,7 +34,7 @@ class EmprestimosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update emprestimo" do
-    patch emprestimo_url(@emprestimo), params: { emprestimo: { data_check_in: @emprestimo.data_check_in, data_check_out: @emprestimo.data_check_out, limite_km: @emprestimo.limite_km, wepay_access_token: @emprestimo.wepay_access_token, wepay_account_id: @emprestimo.wepay_account_id } }
+    patch emprestimo_url(@emprestimo), params: { emprestimo: { data_checkin: @emprestimo.data_checkin, data_checkout: @emprestimo.data_checkout, limite_km: @emprestimo.limite_km, meio_pagamento: @emprestimo.meio_pagamento } }
     assert_redirected_to emprestimo_url(@emprestimo)
   end
 

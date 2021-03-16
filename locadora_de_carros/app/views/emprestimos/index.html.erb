@@ -5,11 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Data check in</th>
-      <th>Data check out</th>
+      <th>Data checkin</th>
+      <th>Data checkout</th>
       <th>Limite km</th>
-      <th>Wepay access token</th>
-      <th>Wepay account</th>
+      <th>Meio pagamento</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +16,10 @@
   <tbody>
     <% @emprestimos.each do |emprestimo| %>
       <tr>
-        <td><%= emprestimo.data_check_in %></td>
-        <td><%= emprestimo.data_check_out %></td>
+        <td><%= emprestimo.data_checkin %></td>
+        <td><%= emprestimo.data_checkout %></td>
         <td><%= emprestimo.limite_km %></td>
-        <td><%= emprestimo.wepay_access_token %></td>
-        <td><%= emprestimo.wepay_account_id %></td>
+        <td><%= emprestimo.meio_pagamento %></td>
         <td><%= link_to 'Show', emprestimo %></td>
         <td><%= link_to 'Edit', edit_emprestimo_path(emprestimo) %></td>
         <td><%= link_to 'Destroy', emprestimo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

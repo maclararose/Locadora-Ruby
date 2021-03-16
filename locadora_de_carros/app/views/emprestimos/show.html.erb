@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Data check in:</strong>
-  <%= @emprestimo.data_check_in %>
+  <strong>Data checkin:</strong>
+  <%= @emprestimo.data_checkin %>
 </p>
 
 <p>
-  <strong>Data check out:</strong>
-  <%= @emprestimo.data_check_out %>
+  <strong>Data checkout:</strong>
+  <%= @emprestimo.data_checkout %>
 </p>
 
 <p>
@@ -16,13 +16,8 @@
 </p>
 
 <p>
-  <strong>Wepay access token:</strong>
-  <%= @emprestimo.wepay_access_token %>
-</p>
-
-<p>
-  <strong>Wepay account:</strong>
-  <%= @emprestimo.wepay_account_id %>
+  <strong>Meio pagamento:</strong>
+  <%= @emprestimo.meio_pagamento %>
 </p>
 
 <%= link_to 'Edit', edit_emprestimo_path(@emprestimo) %> |

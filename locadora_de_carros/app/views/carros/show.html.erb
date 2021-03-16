@@ -1,18 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Ano:</strong>
-  <%= @carro.ano %>
-</p>
-
-<p>
   <strong>Marca:</strong>
   <%= @carro.marca %>
-</p>
-
-<p>
-  <strong>Cor:</strong>
-  <%= @carro.cor %>
 </p>
 
 <p>
@@ -21,13 +11,18 @@
 </p>
 
 <p>
-  <strong>Km:</strong>
-  <%= @carro.km %>
+  <strong>Cor:</strong>
+  <%= @carro.cor %>
 </p>
 
 <p>
-  <strong>Revisao:</strong>
-  <%= @carro.revisao %>
+  <strong>Revisoes em dia:</strong>
+  <%= @carro.revisoes_em_dia %>
+</p>
+
+<p>
+  <strong>Diaria:</strong>
+  <%= @carro.diaria %>
 </p>
 
 <%= link_to 'Edit', edit_carro_path(@carro) %> |

@@ -18,7 +18,6 @@ class LocatariosTest < ApplicationSystemTestCase
     fill_in "Endereco", with: @locatario.endereco
     fill_in "Nome", with: @locatario.nome
     fill_in "Sexo", with: @locatario.sexo
-    fill_in "Telefone", with: @locatario.telefone
     click_on "Create Locatario"
 
     assert_text "Locatario was successfully created"
@@ -33,7 +32,6 @@ class LocatariosTest < ApplicationSystemTestCase
     fill_in "Endereco", with: @locatario.endereco
     fill_in "Nome", with: @locatario.nome
     fill_in "Sexo", with: @locatario.sexo
-    fill_in "Telefone", with: @locatario.telefone
     click_on "Update Locatario"
 
     assert_text "Locatario was successfully updated"

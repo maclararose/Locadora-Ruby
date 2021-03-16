@@ -14,12 +14,11 @@ class CarrosTest < ApplicationSystemTestCase
     visit carros_url
     click_on "New Carro"
 
-    fill_in "Ano", with: @carro.ano
     fill_in "Cor", with: @carro.cor
-    fill_in "Km", with: @carro.km
+    fill_in "Diaria", with: @carro.diaria
     fill_in "Marca", with: @carro.marca
     fill_in "Modelo", with: @carro.modelo
-    check "Revisao" if @carro.revisao
+    check "Revisoes em dia" if @carro.revisoes_em_dia
     click_on "Create Carro"
 
     assert_text "Carro was successfully created"
@@ -30,12 +29,11 @@ class CarrosTest < ApplicationSystemTestCase
     visit carros_url
     click_on "Edit", match: :first
 
-    fill_in "Ano", with: @carro.ano
     fill_in "Cor", with: @carro.cor
-    fill_in "Km", with: @carro.km
+    fill_in "Diaria", with: @carro.diaria
     fill_in "Marca", with: @carro.marca
     fill_in "Modelo", with: @carro.modelo
-    check "Revisao" if @carro.revisao
+    check "Revisoes em dia" if @carro.revisoes_em_dia
     click_on "Update Carro"
 
     assert_text "Carro was successfully updated"

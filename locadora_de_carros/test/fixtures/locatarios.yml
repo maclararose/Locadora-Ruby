@@ -2,18 +2,14 @@
 
 one:
   nome: MyString
-  email: MyString
-  senha: MyString
+  data_nascimento: MyString
+  sexo: MyString
   endereco: MyString
-  data_nascimento: 2021-03-15 14:35:31
-  telefone: MyString
   sexo: MyString
 
 two:
   nome: MyString
-  email: MyString
-  senha: MyString
+  data_nascimento: MyString
+  sexo: MyString
   endereco: MyString
-  data_nascimento: 2021-03-15 14:35:31
-  telefone: MyString
   sexo: MyString

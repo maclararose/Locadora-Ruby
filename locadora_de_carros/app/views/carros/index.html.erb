@@ -5,12 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Ano</th>
       <th>Marca</th>
-      <th>Cor</th>
       <th>Modelo</th>
-      <th>Km</th>
-      <th>Revisao</th>
+      <th>Cor</th>
+      <th>Revisoes em dia</th>
+      <th>Diaria</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +17,11 @@
   <tbody>
     <% @carros.each do |carro| %>
       <tr>
-        <td><%= carro.ano %></td>
         <td><%= carro.marca %></td>
-        <td><%= carro.cor %></td>
         <td><%= carro.modelo %></td>
-        <td><%= carro.km %></td>
-        <td><%= carro.revisao %></td>
+        <td><%= carro.cor %></td>
+        <td><%= carro.revisoes_em_dia %></td>
+        <td><%= carro.diaria %></td>
         <td><%= link_to 'Show', carro %></td>
         <td><%= link_to 'Edit', edit_carro_path(carro) %></td>
         <td><%= link_to 'Destroy', carro, method: :delete, data: { confirm: 'Are you sure?' } %></td>

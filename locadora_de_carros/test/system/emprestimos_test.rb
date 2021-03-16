@@ -14,11 +14,10 @@ class EmprestimosTest < ApplicationSystemTestCase
     visit emprestimos_url
     click_on "New Emprestimo"
 
-    fill_in "Data check in", with: @emprestimo.data_check_in
-    fill_in "Data check out", with: @emprestimo.data_check_out
+    fill_in "Data checkin", with: @emprestimo.data_checkin
+    fill_in "Data checkout", with: @emprestimo.data_checkout
     fill_in "Limite km", with: @emprestimo.limite_km
-    fill_in "Wepay access token", with: @emprestimo.wepay_access_token
-    fill_in "Wepay account", with: @emprestimo.wepay_account_id
+    fill_in "Meio pagamento", with: @emprestimo.meio_pagamento
     click_on "Create Emprestimo"
 
     assert_text "Emprestimo was successfully created"
@@ -29,11 +28,10 @@ class EmprestimosTest < ApplicationSystemTestCase
     visit emprestimos_url
     click_on "Edit", match: :first
 
-    fill_in "Data check in", with: @emprestimo.data_check_in
-    fill_in "Data check out", with: @emprestimo.data_check_out
+    fill_in "Data checkin", with: @emprestimo.data_checkin
+    fill_in "Data checkout", with: @emprestimo.data_checkout
     fill_in "Limite km", with: @emprestimo.limite_km
-    fill_in "Wepay access token", with: @emprestimo.wepay_access_token
-    fill_in "Wepay account", with: @emprestimo.wepay_account_id
+    fill_in "Meio pagamento", with: @emprestimo.meio_pagamento
     click_on "Update Emprestimo"
 
     assert_text "Emprestimo was successfully updated"

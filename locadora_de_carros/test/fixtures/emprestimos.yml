@@ -1,15 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  data_check_in: 2021-03-15 10:29:36
-  data_check_out: 2021-03-15 10:29:36
+  data_checkin: 2021-03-16 03:02:39
+  data_checkout: 2021-03-16 03:02:39
   limite_km: 1.5
-  wepay_access_token: MyString
-  wepay_account_id: 1
+  meio_pagamento: MyString
 
 two:
-  data_check_in: 2021-03-15 10:29:36
-  data_check_out: 2021-03-15 10:29:36
+  data_checkin: 2021-03-16 03:02:39
+  data_checkout: 2021-03-16 03:02:39
   limite_km: 1.5
-  wepay_access_token: MyString
-  wepay_account_id: 1
+  meio_pagamento: MyString

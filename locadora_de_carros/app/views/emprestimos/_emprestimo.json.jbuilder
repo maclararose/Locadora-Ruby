@@ -1,2 +1,2 @@
-json.extract! emprestimo, :id, :data_check_in, :data_check_out, :limite_km, :wepay_access_token, :wepay_account_id, :created_at, :updated_at
+json.extract! emprestimo, :id, :data_checkin, :data_checkout, :limite_km, :meio_pagamento, :created_at, :updated_at
 json.url emprestimo_url(emprestimo, format: :json)

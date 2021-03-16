@@ -1,6 +1,5 @@
 class EmprestimosController < ApplicationController
   before_action :set_emprestimo, only: %i[ show edit update destroy ]
-  before_action :authenticate_locatario!
 
   # GET /emprestimos or /emprestimos.json
   def index
@@ -13,6 +12,7 @@ class EmprestimosController < ApplicationController
 
   # GET /emprestimos/new
   def new
+    prepare_form
     @emprestimo = Emprestimo.new
   end
 
@@ -22,11 +22,19 @@ class EmprestimosController < ApplicationController
 
   # POST /emprestimos or /emprestimos.json
   def create
+    if params[:carro]
+      @emprestimo.carro = Carro.find(carro_params)
+    end
+
+    if params[:locatario]
+      @emprestimo.locatario = Locatario.find(locatario_params)
+    end
+
     @emprestimo = Emprestimo.new(emprestimo_params)
 
     respond_to do |format|
       if @emprestimo.save
-        format.html { redirect_to @emprestimo, notice: "Emprestimo feito com sucesso." }
+        format.html { redirect_to @emprestimo, notice: "Emprestimo was successfully created." }
         format.json { render :show, status: :created, location: @emprestimo }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +47,7 @@ class EmprestimosController < ApplicationController
   def update
     respond_to do |format|
       if @emprestimo.update(emprestimo_params)
-        format.html { redirect_to @emprestimo, notice: "Emprestimo atualizado com sucesso." }
+        format.html { redirect_to @emprestimo, notice: "Emprestimo was successfully updated." }
         format.json { render :show, status: :ok, location: @emprestimo }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +60,7 @@ class EmprestimosController < ApplicationController
   def destroy
     @emprestimo.destroy
     respond_to do |format|
-      format.html { redirect_to emprestimos_url, notice: "Emprestimo excluido com sucesso." }
+      format.html { redirect_to emprestimos_url, notice: "Emprestimo was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -63,8 +71,13 @@ class EmprestimosController < ApplicationController
       @emprestimo = Emprestimo.find(params[:id])
     end
 
+    def prepare_form
+      @carros = Carro.order :marca
+      @locatarios = Locatario.order :nome
+    end
+
     # Only allow a list of trusted parameters through.
     def emprestimo_params
-      params.require(:emprestimo).permit(:data_check_in, :data_check_out, :limite_km, :wepay_access_token, :wepay_account_id)
+      params.require(:emprestimo).permit(:locatario_id, :carro_id, :data_checkin, :data_checkout, :limite_km, :meio_pagamento)
     end
 end

@@ -1,17 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ano: 2021-03-15 10:11:04
   marca: MyString
-  cor: MyString
   modelo: MyString
-  km: 1.5
-  revisao: false
+  cor: MyString
+  revisoes_em_dia: false
+  diaria: 1.5
 
 two:
-  ano: 2021-03-15 10:11:04
   marca: MyString
-  cor: MyString
   modelo: MyString
-  km: 1.5
-  revisao: false
+  cor: MyString
+  revisoes_em_dia: false
+  diaria: 1.5

@@ -17,7 +17,7 @@ class LocatariosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create locatario" do
     assert_difference('Locatario.count') do
-      post locatarios_url, params: { locatario: { data_nascimento: @locatario.data_nascimento, endereco: @locatario.endereco, nome: @locatario.nome, sexo: @locatario.sexo, telefone: @locatario.telefone } }
+      post locatarios_url, params: { locatario: { data_nascimento: @locatario.data_nascimento, endereco: @locatario.endereco, nome: @locatario.nome, sexo: @locatario.sexo } }
     end
 
     assert_redirected_to locatario_url(Locatario.last)
@@ -34,7 +34,7 @@ class LocatariosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update locatario" do
-    patch locatario_url(@locatario), params: { locatario: { data_nascimento: @locatario.data_nascimento, endereco: @locatario.endereco, nome: @locatario.nome, sexo: @locatario.sexo, telefone: @locatario.telefone } }
+    patch locatario_url(@locatario), params: { locatario: { data_nascimento: @locatario.data_nascimento, endereco: @locatario.endereco, nome: @locatario.nome, sexo: @locatario.sexo } }
     assert_redirected_to locatario_url(@locatario)
   end
 
