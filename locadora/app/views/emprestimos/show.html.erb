@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data checkin:</strong>
+  <%= @emprestimo.data_checkin %>
+</p>
+
+<p>
+  <strong>Data checkout:</strong>
+  <%= @emprestimo.data_checkout %>
+</p>
+
+<p>
+  <strong>Limite km:</strong>
+  <%= @emprestimo.limite_km %>
+</p>
+
+<p>
+  <strong>Meio pagamento:</strong>
+  <%= @emprestimo.meio_pagamento %>
+</p>
+
+<%= link_to 'Edit', edit_emprestimo_path(@emprestimo) %> |
+<%= link_to 'Back', emprestimos_path %>

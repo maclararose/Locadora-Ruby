@@ -1,0 +1,37 @@
+<%= form_with(model: locatario) do |form| %>
+  <% if locatario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(locatario.errors.count, "error") %> prohibited this locatario from being saved:</h2>
+
+      <ul>
+        <% locatario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_nascimento %>
+    <%= form.date_field :data_nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sexo %>
+    <%= form.text_field :sexo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

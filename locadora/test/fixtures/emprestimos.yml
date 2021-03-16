@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_checkin: 2021-03-16 03:02:39
+  data_checkout: 2021-03-16 03:02:39
+  limite_km: 1.5
+  meio_pagamento: MyString
+
+two:
+  data_checkin: 2021-03-16 03:02:39
+  data_checkout: 2021-03-16 03:02:39
+  limite_km: 1.5
+  meio_pagamento: MyString
