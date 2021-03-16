@@ -1,2 +1,0 @@
-class LocatarioCarro < ApplicationRecord
-end
