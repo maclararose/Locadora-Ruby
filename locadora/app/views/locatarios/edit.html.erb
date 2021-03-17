@@ -1,6 +1,20 @@
-<h1>Editing Locatario</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+<div class="container-fluid ">
+    <h1>Editing Locatario</h1>
 
-<%= render 'form', locatario: @locatario %>
+    <%= render 'form', locatario: @locatario %>
 
-<%= link_to 'Show', @locatario %> |
-<%= link_to 'Back', locatarios_path %>
+    <%= link_to  'Mostrar', @locatario ,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+  <%= link_to 'Voltar',locatarios_path,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+</div>

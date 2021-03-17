@@ -1,35 +1,60 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+</head>
+<body>
 
-<h1>Carros</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th>Cor</th>
-      <th>Revisoes em dia</th>
-      <th>Diaria</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @carros.each do |carro| %>
+<div class="container">
+  <h2>Carro</h2>           
+  <table class="table table-striped">
+  
+    <thead>
+      <p id="notice"><%= notice %></p>
       <tr>
-        <td><%= carro.marca %></td>
-        <td><%= carro.modelo %></td>
-        <td><%= carro.cor %></td>
-        <td><%= carro.revisoes_em_dia %></td>
-        <td><%= carro.diaria %></td>
-        <td><%= link_to 'Show', carro %></td>
-        <td><%= link_to 'Edit', edit_carro_path(carro) %></td>
-        <td><%= link_to 'Destroy', carro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><strong>Marca:</strong></td>
+        <td><strong>Modelo:</strong></td>
+        <td><strong>Cor:</strong></td>
+        <td><strong>Revisões em dia:</strong></td>
+        <td><strong>Diaria:</strong></td>
+        <td  colspan="3"></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
 
-<br>
+      <% @carros.each do |carro| %>
+        <tr>
+          <td><%= carro.marca %></td>
+          <td><%= carro.modelo %></td>
+          <td><%= carro.cor %></td>
+          <td><%= carro.revisoes_em_dia %></td>
+          <td><%= carro.diaria %></td>
+          <td><%= link_to 'Mostrar', carro %></td>
+          <td><%= link_to 'Editar', edit_carro_path(carro) %></td>
+          <td><%= link_to 'Deletar', carro, method: :delete, data: { confirm: 'Você tem Certeza?' } %></td>
+        </tr>
+      <% end %>
+    </tbody> 
+  </table>
+</div>
+<div class="container">
+    <%= link_to 'Voltar',root_path  ,method: :get, class:"btn  btn-sm btn-success text-white"%>
+    <%= link_to 'Novo Carro', new_carro_path ,method: :get, class:"btn  btn-sm btn-success text-white"%>
+</div>
 
-<%= link_to 'New Carro', new_carro_path %>
+</body>
+</html>
+
+
+
