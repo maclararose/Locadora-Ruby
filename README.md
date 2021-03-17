@@ -5,8 +5,8 @@
       [ ] Uso de plugin Kaminari 
       [X] Uso de plugin Devise 
       [X] Uso de plugin Twitter Bootstrap 
-      [ ] Gerar um arquivo PDF da listagem de tela de consulta 
-      [ ] Validações e Associações entre os modelos 
+      [X] Gerar um arquivo PDF da listagem de tela de consulta 
+      [X] Validações e Associações entre os modelos 
     
    **Funções para implementar:**
       [X] Inserção de novos carros 

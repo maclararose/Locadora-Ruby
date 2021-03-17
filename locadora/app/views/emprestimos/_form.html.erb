@@ -47,7 +47,9 @@
 
   <div class="field">
     <%= form.label :meio_pagamento %>
-    <%= form.text_field :meio_pagamento %>
+    <%= form.radio_button :meio_pagamento, "Cartão" %> Cartão
+    <%= form.radio_button :meio_pagamento, "Em espécie"%> Em espécie
+    <%= form.radio_button :meio_pagamento, "Boleto"%> Boleto
   </div>
 
   <div class="actions">

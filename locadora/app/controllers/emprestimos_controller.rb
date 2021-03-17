@@ -8,6 +8,15 @@ class EmprestimosController < ApplicationController
 
   # GET /emprestimos/1 or /emprestimos/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = EmprestimoPdf.new(@emprestimo)
+        send_data pdf.render, filename: "Consulta/#{@emprestimo.__id__}.pdf",
+                  type: "application/pdf",
+                  disposition: "inline"
+      end
+    end
   end
 
   # GET /emprestimos/new
@@ -34,7 +43,7 @@ class EmprestimosController < ApplicationController
 
     respond_to do |format|
       if @emprestimo.save
-        format.html { redirect_to @emprestimo, notice: "Emprestimo was successfully created." }
+        format.html { redirect_to @emprestimo, notice: "Emprestimo foi criado com sucesso." }
         format.json { render :show, status: :created, location: @emprestimo }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -47,7 +56,7 @@ class EmprestimosController < ApplicationController
   def update
     respond_to do |format|
       if @emprestimo.update(emprestimo_params)
-        format.html { redirect_to @emprestimo, notice: "Emprestimo was successfully updated." }
+        format.html { redirect_to @emprestimo, notice: "Emprestimo foi atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @emprestimo }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -60,7 +69,7 @@ class EmprestimosController < ApplicationController
   def destroy
     @emprestimo.destroy
     respond_to do |format|
-      format.html { redirect_to emprestimos_url, notice: "Emprestimo was successfully destroyed." }
+      format.html { redirect_to emprestimos_url, notice: "Emprestimo foi excluido com sucesso." }
       format.json { head :no_content }
     end
   end
@@ -75,7 +84,7 @@ class EmprestimosController < ApplicationController
       @carros = Carro.order :marca
       @locatarios = Locatario.order :nome
     end
-
+    
     # Only allow a list of trusted parameters through.
     def emprestimo_params
       params.require(:emprestimo).permit(:locatario_id, :carro_id, :data_checkin, :data_checkout, :limite_km, :meio_pagamento)
