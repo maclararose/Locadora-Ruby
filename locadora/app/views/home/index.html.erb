@@ -1,3 +1,45 @@
-<h1>Entrou</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           
 
-<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+            <li class="nav-item">
+                <%= link_to "Locatário", new_locatario_path, method: :get, class:"nav-link"%>
+            </li>
+            
+            <li class="nav-item">
+
+            </li>
+
+            <li class="nav-item">
+                <%= link_to "Entrar", new_user_session_path, method: :get, class:"nav-link"%>  
+            </li>
+    
+            <li class="nav-item">
+                <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"nav-link"%>  
+            </li>
+
+            <li class="nav-item">
+                <%= link_to "Carros", new_carro_path, method: :get, class:"nav-link"%> 
+            </li>
+
+            <li class="nav-item">
+                </br> 
+                <a class="nav-link">
+                    Sobre
+                </a>
+            </li>
+
+
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
