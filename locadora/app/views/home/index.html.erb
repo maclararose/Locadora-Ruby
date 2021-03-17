@@ -1,5 +1,4 @@
- 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head> 
         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -29,26 +28,7 @@
                     </li>
 
                     <li class="nav-item">
-                        </br> 
-                        <a class="nav-link">
-                            <div>
-                                <h2>Sobre<h2>
-                                <p>
-                                Esse é um projeto realizado por <strong>Quêmia e Maria Clara</strong>. 
-                                </p>
-
-                                <p>
-                                Alunas dos quarto perio de Ciência da Computação na UESPI, para a disciplina de Programacao III.
-                                Usamos as tecnologias:
-                                </p>
-
-                                <ul>
-                                    <li>Ruby: 2.7.2</li>
-                                    <li>Rails: 6.1.1</li>
-                                </ul>
-                            </div>
-
-                        </a>
+                        <%= link_to "Sobre", "home/sobre", method: :get, class:"nav-link"%>
                     </li>
                 </ul>
             </div>
@@ -78,7 +58,7 @@
                     </uL>
                     <td>
                         <td>
-                        </br>
+                        <br>
                         <div class="card-body">
                             <%=  link_to "Alugar", new_emprestimo_path ,method: :get, class:"btn  btn-lg btn-success text-white"%>
                         </div>
