@@ -1,33 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Locatarios</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Data nascimento</th>
-      <th>Sexo</th>
-      <th>Endereco</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @locatarios.each do |locatario| %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+<div class="container ">
+  <h1>Locatarios</h1>
+  <table class="table table-striped">
+  <p id="notice"><%= notice %></p>
+    <thead>
       <tr>
-        <td><%= locatario.nome %></td>
-        <td><%= locatario.data_nascimento %></td>
-        <td><%= locatario.sexo %></td>
-        <td><%= locatario.endereco %></td>
-        <td><%= link_to 'Show', locatario %></td>
-        <td><%= link_to 'Edit', edit_locatario_path(locatario) %></td>
-        <td><%= link_to 'Destroy', locatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Data nascimento</th>
+        <th>Sexo</th>
+        <th>Endereco</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @locatarios.each do |locatario| %>
+        <tr>
+          <td><%= locatario.nome %></td>
+          <td><%= locatario.data_nascimento %></td>
+          <td><%= locatario.sexo %></td>
+          <td><%= locatario.endereco %></td>
+          <td><%= link_to 'Mostrar', locatario %></td>
+          <td><%= link_to 'Editar', edit_locatario_path(locatario) %></td>
+          <td><%= link_to 'Deletar', locatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Locatario', new_locatario_path %>
+  <br>
+    <%= link_to 'Voltar', root_path ,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+   <%= link_to 'NovoLocatario', new_locatario_path ,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+</div>

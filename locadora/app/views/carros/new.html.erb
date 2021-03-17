@@ -1,5 +1,20 @@
-<h1>New Carro</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+<div class="container-fluid ">
+    <h2>Novo Carro</h2>
 
-<%= render 'form', carro: @carro %>
+    <%= render 'form', carro: @carro %>
+    <%= link_to 'Voltar',  carros_path ,method: :get, class:"btn  btn-sm btn-success text-white"%>
 
-<%= link_to 'Back', carros_path %>
+
+</div>

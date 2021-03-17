@@ -1,29 +1,61 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+</head>
+<body>
 
-<p>
-  <strong>Marca:</strong>
-  <%= @carro.marca %>
-</p>
+<div class="container">
+  <h2>Carro</h2>           
+  <table class="table table-striped">
+  
+    <thead>
+      <p id="notice"><%= notice %></p>
+      <tr>
+        <td><strong>Marca:</strong></td>
+        <td><strong>Modelo:</strong></td>
+        <td><strong>Cor:</strong></td>
+        <td><strong>Revisoes em dia:</strong></td>
+        <td><strong>Diaria:</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @carro.marca %></td>
+        <td><%= @carro.modelo %></td>
+        <td><%= @carro.cor %></td>
+        <td><%= @carro.revisoes_em_dia %></td>
+        <td><%= @carro.diaria %></td>
+  
+      </tr>
+      
+    </tbody>
+    
+  </table>
+</div>
+<div class="container">
+    <%= link_to 'Voltar',carros_path  ,method: :get, class:"btn  btn-sm btn-success text-white"%>
+    <%= link_to 'Editar', edit_carro_path(@carro)  ,method: :get, class:"btn  btn-sm btn-success text-white"%>
+</div>
 
-<p>
-  <strong>Modelo:</strong>
-  <%= @carro.modelo %>
-</p>
+</body>
+</html>
 
-<p>
-  <strong>Cor:</strong>
-  <%= @carro.cor %>
-</p>
 
-<p>
-  <strong>Revisoes em dia:</strong>
-  <%= @carro.revisoes_em_dia %>
-</p>
 
-<p>
-  <strong>Diaria:</strong>
-  <%= @carro.diaria %>
-</p>
 
-<%= link_to 'Edit', edit_carro_path(@carro) %> |
-<%= link_to 'Back', carros_path %>
+
+
+
+

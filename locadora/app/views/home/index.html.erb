@@ -1,45 +1,145 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Locadora M&Q</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           
+ 
+<!DOCTYPE html>
+<html>
+    <head> 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Locadora M&Q</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
 
-            <li class="nav-item">
-                <%= link_to "Locatário", new_locatario_path, method: :get, class:"nav-link"%>
-            </li>
+                    <li class="nav-item">
+                        <%= link_to "Locatário", new_locatario_path, method: :get, class:"nav-link"%>
+                    </li>
+                    
+                    <li class="nav-item">
+
+                    </li>
             
-            <li class="nav-item">
+                    <li class="nav-item">
+                        <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"nav-link"%>  
+                    </li>
 
-            </li>
+                    <li class="nav-item">
+                        <%= link_to "Carros", new_carro_path, method: :get, class:"nav-link"%> 
+                    </li>
 
-            <li class="nav-item">
-                <%= link_to "Entrar", new_user_session_path, method: :get, class:"nav-link"%>  
-            </li>
+                    <li class="nav-item">
+                        </br> 
+                        <a class="nav-link">
+                            <div>
+                                <h2>Sobre<h2>
+                                <p>
+                                Esse é um projeto realizado por <strong>Quêmia e Maria Clara</strong>. 
+                                </p>
+
+                                <p>
+                                Alunas dos quarto perio de Ciência da Computação na UESPI, para a disciplina de Programacao III.
+                                Usamos as tecnologias:
+                                </p>
+
+                                <ul>
+                                    <li>Ruby: 2.7.2</li>
+                                    <li>Rails: 6.1.1</li>
+                                </ul>
+                            </div>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    </head>
+     <body>
     
-            <li class="nav-item">
-                <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"nav-link"%>  
-            </li>
+        <table>
+            <tr>
+                <td>
+                <%= image_tag image_url('hyndai-creta-prata-frente.jpg'), class:'card-img' %>
+                <div class="card-body mb-5 ">
+                    <h3 class="card-subtitle mb-2 text-muted"></h3>
+                </div>  
+                </td>
+                <td>
+                     <uL class="list-group list-group-flush">
+                        <h3 class="card-subtitle mb-2 text-muted">Hydai Creta 2021</h3>
+                        <h1 class="card-text"> R$ 137,57</h1>
+                        <li class="list-group-item">Proteção do Veículo</li>
+                        <li class="list-group-item">Melhor Preço garantido</li>
+                        <li class="list-group-item">KM Livre(ilimitado)</li>
+                        <li class="list-group-item">Taxas da Locadora</li>
+                        <li class="list-group-item">Sem Taxa de Alteração</li>
+                        <li class="list-group-item">Pague no Destino</li>
+                    </uL>
+                    <td>
+                        <td>
+                        </br>
+                        <div class="card-body">
+                            <%=  link_to "Alugar", new_emprestimo_path ,method: :get, class:"btn  btn-lg btn-success text-white"%>
+                        </div>
+                        </td>
+                    </td>
+                </td> 
+            </tr>    
+        </table>
+        
+        <table>
+            <tr>
+                <td>
+                 <%= image_tag image_url('jeep_renagete_Preto_frente.jpg'), class: 'card-img' %> 
+                <div class="card-body mb-5 ">
+                </div>  
+                </td>
+                <td>
+                     <uL class="list-group list-group-flush">
+                        <h3 class="card-subtitle mb-2 text-muted">Jeep Renagete</h3>
+                        <h1 class="card-text"> R$ 148,80</h1>
+                        <li class="list-group-item">Proteção do Veículo</li>
+                        <li class="list-group-item">Melhor Preço garantido</li>
+                        <li class="list-group-item">KM Livre(ilimitado)</li>
+                        <li class="list-group-item">Taxas da Locadora</li>
+                        <li class="list-group-item">Sem Taxa de Alteração</li>
+                        <li class="list-group-item">Pague no Destino</li>
+                    </uL>
+                    <div class="card-body">
+                         <%=  link_to "Alugar", new_emprestimo_path ,method: :get, class:"btn  btn-lg btn-success text-white"%>
+                    </div>
+                
+                </td> 
+            </tr>    
+        </table>
 
-            <li class="nav-item">
-                <%= link_to "Carros", new_carro_path, method: :get, class:"nav-link"%> 
-            </li>
+        <table>
+            <tr>
+                <td>
+                 <%= image_tag image_url('honda-civic-prata-frente.jpg'), class: 'card-img' %> 
+                <div class="card-body mb-5 ">
+                </div>  
+                </td>
+                <td>
+                     <uL class="list-group list-group-flush">
+                        <h3 class="card-subtitle mb-2 text-muted">Honda Civic</h3>
+                        <h1 class="card-text"> R$ 195,50</h1>
+                        <li class="list-group-item">Proteção do Veículo</li>
+                        <li class="list-group-item">Melhor Preço garantido</li>
+                        <li class="list-group-item">KM Livre(ilimitado)</li>
+                        <li class="list-group-item">Taxas da Locadora</li>
+                        <li class="list-group-item">Sem Taxa de Alteração</li>
+                        <li class="list-group-item">Pague no Destino</li>
+                    </uL>
+                    <div class="card-body">
+                         <%=  link_to "Alugar", new_emprestimo_path ,method: :get, class:"btn  btn-lg btn-success text-white"%>
+                    </div>
+                
+                </td> 
+            </tr>    
+        </table>
 
-            <li class="nav-item">
-                </br> 
-                <a class="nav-link">
-                    Sobre
-                </a>
-            </li>
+    </body>
 
-
-
-      
-      </ul>
-
-    </div>
-  </div>
-</nav>
+</html>

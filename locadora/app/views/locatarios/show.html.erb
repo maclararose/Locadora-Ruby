@@ -1,24 +1,48 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+</head>
+<body>
+  <div class="container">
+  <h2>Lacatário</h2>           
+  <table class="table table-striped">
 
-<p>
-  <strong>Nome:</strong>
-  <%= @locatario.nome %>
-</p>
+    <thead>
+      <p id="notice"><%= notice %></p>
+      <tr>
+        <td><strong>Nome:</strong></td>
+        <td><strong>Data nascimento:</strong></td>
+        <td><strong>Sexo:</strong></td>
+        <td><strong>Endereco:</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>  <%= @locatario.nome %></td>
+        <td> <%= @locatario.data_nascimento %></td>
+        <td><%= @locatario.sexo %></td>
+        <td><%= @locatario.endereco %></td>
+      </tr>   
+    </tbody>   
+  </table>
+  </div>
+    <div class="container">
+      <%= link_to 'Editar',edit_locatario_path(@locatario),method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+      <%= link_to 'Voltar', locatarios_path,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+    </div>
 
-<p>
-  <strong>Data nascimento:</strong>
-  <%= @locatario.data_nascimento %>
-</p>
+</body>
+</html>
 
-<p>
-  <strong>Sexo:</strong>
-  <%= @locatario.sexo %>
-</p>
-
-<p>
-  <strong>Endereco:</strong>
-  <%= @locatario.endereco %>
-</p>
-
-<%= link_to 'Edit', edit_locatario_path(@locatario) %> |
-<%= link_to 'Back', locatarios_path %>

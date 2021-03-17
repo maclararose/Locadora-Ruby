@@ -1,24 +1,57 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Locadora M&Q</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+  </div>
+</nav>
+</head>
+<body>
 
-<p>
-  <strong>Data checkin:</strong>
-  <%= @emprestimo.data_checkin %>
-</p>
+<div class="container">
+  <h2>Empréstimo</h2>           
+  <table class="table table-striped">
+  
+    <thead>
+      <p id="notice"><%= notice %></p>
+      <tr>
+        <td><strong>Data checkin:</strong></td>
+        <td><strong>Data checkout:</strong></td>
+        <td><strong>Limite km:</strong></td>
+        <td><strong>Meio pagamento:</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= @emprestimo.data_checkin %></td>
+        <td><%= @emprestimo.data_checkout %></td>
+        <td><%= @emprestimo.limite_km %></td>
+        <td><%= @emprestimo.meio_pagamento %></td>
+      </tr>
+      
+    </tbody>
+    
+  </table>
+</div>
+<div class="container">
+   <%= link_to 'Editar', edit_emprestimo_path(@emprestimo),method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+  <%= link_to 'Voltar',emprestimos_path,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+</div>
 
-<p>
-  <strong>Data checkout:</strong>
-  <%= @emprestimo.data_checkout %>
-</p>
+</body>
+</html>
 
-<p>
-  <strong>Limite km:</strong>
-  <%= @emprestimo.limite_km %>
-</p>
+  
 
-<p>
-  <strong>Meio pagamento:</strong>
-  <%= @emprestimo.meio_pagamento %>
-</p>
 
-<%= link_to 'Edit', edit_emprestimo_path(@emprestimo) %> |
-<%= link_to 'Back', emprestimos_path %>
+
+ 
+
