@@ -1,6 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Locatario:</strong>
+  <%= @emprestimo.locatario.nome %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @emprestimo.carro.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @emprestimo.carro.modelo %>
+</p>
+
+<p>
   <strong>Data checkin:</strong>
   <%= @emprestimo.data_checkin %>
 </p>
@@ -21,4 +36,5 @@
 </p>
 
 <%= link_to 'Edit', edit_emprestimo_path(@emprestimo) %> |
+<%= link_to 'Imprimir', emprestimo_path(@emprestimo, format: "pdf")%> |
 <%= link_to 'Back', emprestimos_path %>

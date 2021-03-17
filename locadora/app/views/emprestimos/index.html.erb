@@ -5,6 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>Locatario</th>
+      <th>Marca</th>
+      <th>Modelo</th>
       <th>Data checkin</th>
       <th>Data checkout</th>
       <th>Limite km</th>
@@ -16,13 +19,16 @@
   <tbody>
     <% @emprestimos.each do |emprestimo| %>
       <tr>
-        <td><%= emprestimo.data_checkin %></td>
-        <td><%= emprestimo.data_checkout %></td>
+        <td><%= emprestimo.locatario.nome %></td>
+        <td><%= emprestimo.carro.marca %></td>
+        <td><%= emprestimo.carro.modelo %></td>
+        <td><%= emprestimo.data_checkin.to_s %></td>
+        <td><%= emprestimo.data_checkout.to_s %></td>
         <td><%= emprestimo.limite_km %></td>
         <td><%= emprestimo.meio_pagamento %></td>
         <td><%= link_to 'Show', emprestimo %></td>
         <td><%= link_to 'Edit', edit_emprestimo_path(emprestimo) %></td>
-        <td><%= link_to 'Destroy', emprestimo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', emprestimo, method: :delete, data: { confirm: 'Tem certeza que quer apagar os dados?' } %></td>
       </tr>
     <% end %>
   </tbody>
