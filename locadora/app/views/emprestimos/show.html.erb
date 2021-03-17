@@ -17,12 +17,12 @@
 
 <p>
   <strong>Data checkin:</strong>
-  <%= @emprestimo.data_checkin %>
+  <%= @emprestimo.data_checkin.strftime("%d/%m/%Y - %H:%M") %>
 </p>
 
 <p>
   <strong>Data checkout:</strong>
-  <%= @emprestimo.data_checkout %>
+  <%= @emprestimo.data_checkout.strftime("%d/%m/%Y - %H:%M") %>
 </p>
 
 <p>

@@ -17,12 +17,12 @@
     <% @locatarios.each do |locatario| %>
       <tr>
         <td><%= locatario.nome %></td>
-        <td><%= locatario.data_nascimento %></td>
+        <td><%= locatario.data_nascimento.strftime("%d/%m/%Y") %></td>
         <td><%= locatario.sexo %></td>
         <td><%= locatario.endereco %></td>
         <td><%= link_to 'Show', locatario %></td>
         <td><%= link_to 'Edit', edit_locatario_path(locatario) %></td>
-        <td><%= link_to 'Destroy', locatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', locatario, method: :delete, data: { confirm: 'Tem certeza que quer excluir o locatario?' } %></td>
       </tr>
     <% end %>
   </tbody>
