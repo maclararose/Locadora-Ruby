@@ -9,18 +9,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                
-
                     <li class="nav-item">
-                        <%= link_to "Locatário", new_locatario_path, method: :get, class:"nav-link"%>
+                        <%= link_to "Home", root_path, method: :get, class:"nav-link"%>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to "Locatário", locatarios_path, method: :get, class:"nav-link"%>
                     </li>
 
                     <li>
-                        <%= link_to "Emprestimos", new_emprestimo_path, method: :get, class:"nav-link"%>
+                        <%= link_to "Emprestimos", emprestimos_path, method: :get, class:"nav-link"%>
                     </li>
 
                     <li class="nav-item">
-                        <%= link_to "Carros", new_carro_path, method: :get, class:"nav-link"%> 
+                        <%= link_to "Carros", carros_path, method: :get, class:"nav-link"%> 
                     </li>
 
                     <li class="nav-item">

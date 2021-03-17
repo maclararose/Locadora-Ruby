@@ -6,7 +6,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        </ul>
+                    <li class="nav-item">
+                        <%= link_to "Home", root_path, method: :get, class:"nav-link"%>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <%= link_to "Locatário", locatarios_path, method: :get, class:"nav-link"%>
+                    </li>
+
+                    <li>
+                        <%= link_to "Emprestimos", emprestimos_path, method: :get, class:"nav-link"%>
+                    </li>
+
+                    <li class="nav-item">
+                        <%= link_to "Carros", carros_path, method: :get, class:"nav-link"%> 
+                    </li>
+
+                    <li class="nav-item">
+                        <%= link_to "Sobre", "home/sobre", method: :get, class:"nav-link"%>
+                    </li>
+
+                    <li class="nav-item">
+                        <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"nav-link"%>  
+                    </li>
+          </ul>
       </div>
   </div>
 </nav>
@@ -41,5 +64,5 @@
 
   <br>
     <%= link_to 'Voltar', root_path ,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
-   <%= link_to 'NovoLocatario', new_locatario_path ,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
+   <%= link_to 'Novo Locatario', new_locatario_path ,method: :get, class:"btn  btn-sm-5 btn-success text-white"%>
 </div>
