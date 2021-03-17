@@ -14,13 +14,9 @@
                     <li class="nav-item">
                         <%= link_to "Locatário", new_locatario_path, method: :get, class:"nav-link"%>
                     </li>
-                    
-                    <li class="nav-item">
 
-                    </li>
-            
-                    <li class="nav-item">
-                        <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"nav-link"%>  
+                    <li>
+                        <%= link_to "Emprestimos", new_emprestimo_path, method: :get, class:"nav-link"%>
                     </li>
 
                     <li class="nav-item">
@@ -29,6 +25,10 @@
 
                     <li class="nav-item">
                         <%= link_to "Sobre", "home/sobre", method: :get, class:"nav-link"%>
+                    </li>
+
+                    <li class="nav-item">
+                        <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"nav-link"%>  
                     </li>
                 </ul>
             </div>
